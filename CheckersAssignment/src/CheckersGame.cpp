@@ -1,52 +1,10 @@
-#include "CameraAndProjections.h"
-
-int main()
-{
-	CameraAndProjections app;
-
-	if (app.startup() == false)
-	{
-		return -1;
-	}
-
-	while (app.update() == true)
-	{
-		app.draw();
-	}
-
-	app.shutdown();
-	
-	return 0;
-}
-
-/*
-
-USE THIS FOR ALL FUTURE CLASS BUILDING
-
-#include "Application.h"
-#include "Camera.h"
-
-class REPLACE : public Application
-{
-public:
-bool startup();
-void shutdown();
-bool update();
-void draw();
-
-FlyCamera* m_camera;
-float m_timer;
-unsigned int m_programID;
-
-};
-
-
+#include "CheckersGame.h"
 
 #include "gl_core_4_4.h"
 #include "GLFW/glfw3.h"
 #include "Gizmos.h"
 
-bool REPLACE::startup()
+bool CheckersGame::startup()
 {
 	if (Application::startup() == false)
 	{
@@ -62,14 +20,14 @@ bool REPLACE::startup()
 	return true;
 }
 
-void REPLACE::shutdown()
+void CheckersGame::shutdown()
 {
 	Gizmos::destroy();
 
 	Application::shutdown();
 }
 
-bool REPLACE::update()
+bool CheckersGame::update()
 {
 	if (Application::update() == false)
 	{
@@ -89,15 +47,15 @@ bool REPLACE::update()
 
 	for (int i = 0; i <= 20; ++i)
 	{
-	Gizmos::addLine(vec3(-10 + i, 0, -10), vec3(-10 + i, 0, 10), i == 10 ? white : black);
-	Gizmos::addLine(vec3(-10, 0, -10 + i), vec3(10, 0, -10 + i), i == 10 ? white : black);
+		Gizmos::addLine(vec3(-10 + i, 0, -10), vec3(-10 + i, 0, 10), i == 10 ? white : black);
+		Gizmos::addLine(vec3(-10, 0, -10 + i), vec3(10, 0, -10 + i), i == 10 ? white : black);
 	}
 
 
 	return true;
 }
 
-void REPLACE::draw()
+void CheckersGame::draw()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -110,4 +68,3 @@ void REPLACE::draw()
 	glfwSwapBuffers(m_window);
 	glfwPollEvents();
 }
-*/
