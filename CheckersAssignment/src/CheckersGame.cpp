@@ -60,11 +60,12 @@ void CheckersGame::draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	Gizmos::draw(m_camera->m_proj, m_camera->m_view);
+	/*
 	glUseProgram(m_programID);
 
 	int view_proj_uniform = glGetUniformLocation(m_programID, "projection_view");
 	glUniformMatrix4fv(view_proj_uniform, 1, GL_FALSE, (float*)&m_camera->m_view_proj);
-
+	*/
 	glfwSwapBuffers(m_window);
 	glfwPollEvents();
 }

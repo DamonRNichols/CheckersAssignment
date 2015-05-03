@@ -1,8 +1,8 @@
-#include "CameraAndProjections.h"
+#include "CheckersGame.h"
 
 int main()
 {
-	CameraAndProjections app;
+	CheckersGame app;
 
 	if (app.startup() == false)
 	{
