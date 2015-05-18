@@ -81,6 +81,7 @@
     <ClCompile Include="src\Gizmos.cpp" />
     <ClCompile Include="src\gl_core_4_4.c" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Pieces.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\OpenGLProject\src\Gizmos.h" />
@@ -89,6 +90,7 @@
     <ClInclude Include="src\CheckersGame.h" />
     <ClInclude Include="src\glm_header.h" />
     <ClInclude Include="src\gl_core_4_4.h" />
+    <ClInclude Include="src\Pieces.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

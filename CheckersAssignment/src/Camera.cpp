@@ -6,7 +6,7 @@
 Camera::Camera()
 {
 	setPerspective(glm::radians(60.0f), 1280.0f / 720.0f, 0.1f, 1000.f);
-	setLookAt(vec3(10, 10, 10), vec3(0, 0, 0), vec3(0, 1, 0));
+	setLookAt(vec3(-5, 10, 4), vec3(4, 0, 4), vec3(0, 1, 0));
 }
 
 void Camera::UpdateViewProj()

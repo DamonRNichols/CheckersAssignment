@@ -39,6 +39,9 @@
     <ClCompile Include="src\Gizmos.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pieces.cpp">
+      <Filter>Resource Files\Checkers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h">
@@ -58,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="..\..\OpenGLProject\src\Gizmos.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pieces.h">
+      <Filter>Header Files\Checkers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

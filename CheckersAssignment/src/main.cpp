@@ -12,6 +12,10 @@ int main()
 	while (app.update() == true)
 	{
 		app.draw();
+
+		int i = 16;
+
+
 	}
 
 	app.shutdown();

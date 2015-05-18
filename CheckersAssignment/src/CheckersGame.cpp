@@ -4,6 +4,7 @@
 #include "GLFW/glfw3.h"
 #include "Gizmos.h"
 
+
 bool CheckersGame::startup()
 {
 	if (Application::startup() == false)
@@ -16,6 +17,7 @@ bool CheckersGame::startup()
 	Gizmos::create();
 
 	m_camera = new FlyCamera();
+	Players = new PlayerManager();
 
 	return true;
 }
@@ -45,12 +47,17 @@ bool CheckersGame::update()
 	vec4 white(1);
 	vec4 black(0, 0, 0, 1);
 
-	for (int i = 0; i <= 20; ++i)
+	for (int i = 0; i <= 8; ++i)
 	{
-		Gizmos::addLine(vec3(-10 + i, 0, -10), vec3(-10 + i, 0, 10), i == 10 ? white : black);
-		Gizmos::addLine(vec3(-10, 0, -10 + i), vec3(10, 0, -10 + i), i == 10 ? white : black);
+		Gizmos::addLine(vec3(0 + i, 0, 0), vec3(0 + i, 0, 8), white);
+		Gizmos::addLine(vec3(0, 0, 0 + i), vec3(8, 0, 0 + i), white);
 	}
+	//origin lines
+	Gizmos::addLine(vec3(0, 0.01f, 0), vec3(1, 0.01f, 0), vec4(1, 0, 0, 1));
+	Gizmos::addLine(vec3(0, 0, 0), vec3(0, 1, 0), vec4(0, 1, 0, 1));
+	Gizmos::addLine(vec3(0, 0.01f, 0), vec3(0, 0.01f, 1), vec4(0, 0, 1, 1));
 
+	Players->Update(m_window, m_camera);
 
 	return true;
 }

@@ -4,6 +4,8 @@
 #include "Application.h"
 #include "Camera.h"
 
+#include "Pieces.h"
+
 class CheckersGame : public Application
 {
 public:
@@ -12,9 +14,14 @@ public:
 	bool update();
 	void draw();
 
+
+	bool TurnRed;
+
 	FlyCamera* m_camera;
 	float m_timer;
 	unsigned int m_programID;
+
+	PlayerManager* Players;
 
 };
 
